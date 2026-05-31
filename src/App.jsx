@@ -13,6 +13,10 @@ import Aurora from "./components/Aurora/Aurora";
 import AOS from 'aos';
 import ChatRoom from "./components/ChatRoom";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import Timeline from "./components/Timeline/Timeline";
+import Achievements from "./components/Achievement/Achievement";
+import { FiMail, FiPhone, FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
+import { SiCodechef, SiX } from 'react-icons/si';
 // ..
 AOS.init();
 
@@ -75,23 +79,23 @@ function App() {
         <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
           <div className="animate__animated animate__fadeInUp animate__delay-3s">
             <div className="flex items-center gap-3 mb-6 bg bg-zinc-800 w-fit p-4 rounded-2xl">
-              <img src="./assets/faris1.png" className="w-10 rounded-md" />
-              <q>Avoid or just undertake it</q>
+              <img src="./assets/ayush.png" className="w-10 rounded-md" />
+              <q>Adapt to changes</q>
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              <ShinyText text="Hi I'm Faris Edrik Prayoga" disabled={false} speed={3} className='custom-class' />
+              <ShinyText text="Hi I'm Ayush Kumar" disabled={false} speed={3} className='custom-class' />
             </h1>
             <BlurText
-              text="A passionate application and web developer dedicated to crafting modern, high-performance digital experiences through innovative and user-friendly solutions."
+              text="Full Stack Engineer with foundation in core Computer Science, qualified GATE CSE 2026. Proficient in the MERN stack,microservices, AWS, and Docker. Student at NIT Durgapur focused on building scalable, AI-enhanced software systems."
               delay={150}
               animateBy="words"
               direction="top"
               className=" mb-6"
             />
             <div className="flex items-center sm:gap-4 gap-2">
-              <a 
-                href="./assets/CV.pdf" 
-                download="Faris_Edrik_Prayoga_CV.pdf" 
+              <a
+                href="./assets/CV.pdf"
+                download="Ayush_Kumar_CV.pdf"
                 className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
               >
                 <ShinyText text="Download CV" disabled={false} speed={3} className="custom-class" />
@@ -105,12 +109,12 @@ function App() {
           </div>
           <div className="md:ml-auto animate__animated animate__fadeInUp animate__delay-4s">
             <ProfileCard
-              name="Faris Edrik P"
-              title="Web Developer"
-              handle="farisedrikp"
+              name="Ayush Kumar"
+              title="Software Developer & AI Engineer"
+              handle="ayushprog"
               status="Online"
               contactText="Contact Me"
-              avatarUrl="./assets/faris.png"
+              avatarUrl="./assets/ayush1.png"
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
@@ -129,7 +133,7 @@ function App() {
                 </h2>
 
                 <BlurText
-                  text="I’m Faris Edrik Prayoga, a full-stack developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 20 completed projects, I’m committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products."
+                  text="I am a Full Stack Engineer and computer science enthusiast currently studying Biotechnology at NIT Durgapur. My technical expertise centers around the MERN stack, microservices, AWS, and Docker, with a strong focus on building scalable, AI-enhanced software systems. I am deeply invested in competitive programming, regularly tackling data structures and algorithmic challenges on platforms like CodeChef and LeetCode. Recently, I qualified for GATE CSE 2026, reflecting my strong foundation in core computer science principles. Beyond the terminal and my Linux WSL development environment, I maintain a strict routine of calisthenics and bodybuilding, and I express my creativity by painting portraits. Whether I am orchestrating ephemeral Docker containers or designing a seamless user experience, I approach every challenge with dedication and a problem-solving mindset."
                   delay={150}
                   animateBy="words"
                   direction="top"
@@ -145,15 +149,15 @@ function App() {
                   </div>
                   <div>
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      3<span className="text-violet-500">+</span>
+                      7<span className="text-violet-500">+</span>
                     </h1>
-                    <p>Years of Experience</p>
+                    <p>Open Source Contributions</p>
                   </div>
                   <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true">
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      3.81<span className="text-violet-500">/4.00</span>
+                      3<span className="text-violet-500">+</span>
                     </h1>
-                    <p>GPA</p>
+                    <p>Domain</p>
                   </div>
                 </div>
 
@@ -225,6 +229,73 @@ function App() {
         </div>
         {/* Proyek */}
 
+        <Timeline />
+
+        {/* Linkedin Section */}
+        <div className="mt-32 mx-auto w-full max-w-[1600px]" id="linkedin">
+
+          {/* Main Heading */}
+          <h1
+            className="text-center text-4xl font-bold mb-8"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            LinkedIn
+          </h1>
+
+          {/* Clickable Image Container */}
+          <a
+            href="https://linkedin.com/in/ayush-kumar-819251256"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full block hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_30px_rgba(168,85,247,0.4)] rounded-3xl border-[5px] border-violet-500/40 overflow-hidden"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            data-aos-once="true"
+          >
+            <img
+              src="./assets/linkedin.png"
+              alt="Ayush Kumar LinkedIn Profile"
+              className="w-full h-auto object-cover"
+            />
+          </a>
+        </div>
+
+        {/* GitHub Section */}
+        <div className="mt-32 mx-auto w-full max-w-[1600px]" id="github">
+
+          {/* Main Heading */}
+          <h1
+            className="text-center text-4xl font-bold mb-8"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            GitHub
+          </h1>
+
+          {/* Clickable Image Container */}
+          <a
+            href="https://github.com/ayushprog1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full block hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_30px_rgba(168,85,247,0.4)] rounded-3xl border-[5px] border-violet-500/40 overflow-hidden"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            data-aos-once="true"
+          >
+            <img
+              src="./assets/github.png"
+              alt="Ayush Kumar GitHub Profile"
+              className="w-full h-auto object-cover"
+            />
+          </a>
+        </div>
+
+        <Achievements />
 
         {/* Kontak */}
         <div className="kontak mt-32 sm:p-10 p-0" id="contact">
@@ -234,7 +305,7 @@ function App() {
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            Contact & Chat
+            {/*Contact & Chat*/}Get In Touch
           </h1>
           <p
             className="text-base/loose text-center mb-10 opacity-50"
@@ -243,20 +314,85 @@ function App() {
             data-aos-delay="300"
             data-aos-once="true"
           >
-            Get in touch with me or chat in real-time
+            {/*Get in touch with me or chat in real-time*/}Feel free to reach out for collaborations, opportunities, or just a quick hello.
           </p>
 
           {/* Container dua kolom */}
           <div className="flex flex-col md:flex-row gap-8">
             {/* Chat Room di kiri */}
-            <div className="flex-1 bg-zinc-800 p-6 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">
+            {/*<div className="flex-1 bg-zinc-800 p-6 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">
               <ChatRoom />
+            </div>*/}
+            {/* Container dua kolom */}
+            <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto relative z-10">
+
+              {/* Contact Info & Socials di kiri */}
+              <div
+                className="flex-1 bg-zinc-900/60 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-2xl border border-white/5 flex flex-col justify-between overflow-hidden relative group"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+                data-aos-once="true"
+              >
+                {/* Inner subtle glow */}
+                <div className="absolute -top-24 -right-24 w-64 h-64 bg-violet-500/10 blur-3xl rounded-full group-hover:bg-violet-500/20 transition-all duration-700"></div>
+
+                <div>
+                  <h2 className="text-2xl font-bold text-white mb-8">Contact Details</h2>
+
+                  {/* Email & Phone Cards */}
+                  <div className="flex flex-col gap-4">
+                    <a href="mailto:ay.ayush.ku@gmail.com" className="flex items-center gap-5 p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-violet-500/30 rounded-2xl transition-all duration-300 group/link">
+                      <div className="bg-zinc-900 text-violet-400 p-3.5 rounded-xl shadow-inner group-hover/link:scale-110 transition-transform">
+                        <FiMail size={22} />
+                      </div>
+                      <div>
+                        <p className="text-xs text-zinc-500 font-semibold uppercase tracking-wider mb-1">Email Me</p>
+                        <p className="text-zinc-200 font-medium truncate">ay.ayush.ku@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="tel:+919693818060" className="flex items-center gap-5 p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-violet-500/30 rounded-2xl transition-all duration-300 group/link">
+                      <div className="bg-zinc-900 text-cyan-400 p-3.5 rounded-xl shadow-inner group-hover/link:scale-110 transition-transform">
+                        <FiPhone size={22} />
+                      </div>
+                      <div>
+                        <p className="text-xs text-zinc-500 font-semibold uppercase tracking-wider mb-1">Call Me</p>
+                        <p className="text-zinc-200 font-medium">(+91) 9693818060</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="mt-12">
+                  <p className="text-sm text-zinc-500 font-semibold uppercase tracking-wider mb-4">Find me on</p>
+                  <div className="flex flex-wrap gap-3">
+                    {[
+                      { icon: <FiLinkedin size={20} />, link: "https://linkedin.com/in/ayush-kumar-819251256", color: "hover:text-blue-400 hover:border-blue-400/50" },
+                      { icon: <FiGithub size={20} />, link: "https://github.com/ayushprog1", color: "hover:text-white hover:border-white/50" },
+                      { icon: <SiCodechef size={20} />, link: "https://www.codechef.com/users/ayushprog1", color: "hover:text-amber-700 hover:border-amber-700/50" },
+                      { icon: <SiX size={20} />, link: "https://x.com", color: "hover:text-zinc-300 hover:border-zinc-300/50" },
+                      { icon: <FiInstagram size={20} />, link: "https://instagram.com", color: "hover:text-pink-500 hover:border-pink-500/50" }
+                    ].map((social, idx) => (
+                      <a
+                        key={idx}
+                        href={social.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`bg-zinc-900/80 p-3.5 rounded-xl border border-white/5 text-zinc-400 transition-all duration-300 hover:-translate-y-1 shadow-lg ${social.color}`}
+                      >
+                        {social.icon}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Contact Form di kanan */}
             <div className="flex-1">
               <form
-                action="https://formsubmit.co/rissoppa21@gmail.com"
+                action="https://formsubmit.co/ayush.workproject@gmail.com"
                 method="POST"
                 className="bg-zinc-800 p-10 w-full rounded-md"
                 autoComplete="off"

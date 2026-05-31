@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FiX, FiGithub } from 'react-icons/fi'; // Install react-icons jika belum: npm install react-icons
+import { FiX, FiGithub, FiExternalLink } from 'react-icons/fi';
 
 const ProjectModal = ({ isOpen, onClose, project }) => {
   // State untuk mengontrol animasi penutupan
@@ -65,15 +65,37 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                 {project.fullDescription}
             </p>
 
-            <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center justify-center gap-2 font-semibold bg-violet-600 p-3 px-5 rounded-full w-full cursor-pointer border border-transparent hover:bg-violet-700 transition-colors"
-            >
-                <FiGithub />
-                <span>Source Code</span>
-            </a>
+            {/* --- BUTTONS --- */}
+            <div className="mt-4 flex gap-3 w-full">
+                {/* Live Preview Button (Only shows if liveUrl exists in data.js) */}
+                {project.liveUrl && (
+                    <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 inline-flex items-center justify-center gap-2 font-semibold bg-violet-600 p-3 rounded-full cursor-pointer hover:bg-violet-700 transition-colors"
+                    >
+                        <FiExternalLink />
+                        <span>Live Preview</span>
+                    </a>
+                )}
+
+
+                {/* Source Code Button */}
+                {project.url && (
+                    <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 inline-flex items-center justify-center gap-2 font-semibold bg-zinc-700 p-3 rounded-full cursor-pointer hover:bg-zinc-600 transition-colors"
+                    >
+                        <FiGithub />
+                        <span>Source Code</span>
+                    </a>
+                )}
+
+                
+            </div>
         </div>
       </div>
        {/* CSS untuk animasi */}
